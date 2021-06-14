@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NOTA</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="description" content=""/>
+	<meta name="keywords" content="notas, personal, bloc de notas, apuntes"/>
+	<meta name="author" content="Lautaro Riofrio" />
+</head>
+<body>
+	<!-- -.-.-.-.-.-..-.-.- -->
+	<div class="contenedor inicio">	</div>
+		<div class="boton_nueva_nota"></div>
+	</div>
+	<!-- -.-.-.-.-.-..-.-.- -->
+	<div class="contenedor lectura">
+		<div class="menu_ventana" id="menu_ventana_lectura">
+			<button class="ventana_boton" id="eliminar_nota_boton" >Eliminar</button>
+			<button class="ventana_boton" id="editar_nota_boton" >Editar</button>
+			<button class="cerrar_menu_ventana" onclick="OcultarTodosLosMenuVentana()">close</button>
+		</div>
+		<div class="menu menu_lectura">
+			<div class="boton_menu regresar_boton" id="regresar_lectura_inicio"></div>
+			<div class="boton_menu opciones_boton" id="opciones_lectura"></div>
+
+		</div>
+		<textarea class="titulo titulo_texto" readonly="readonly">Hola como estas</textarea>
+		<textarea class="contenido contenido_texto" readonly="readonly"></textarea>
+	</div>
+	<!-- -.-.-.-.-.-..-.-.- -->
+	<div class="contenedor nueva_nota escritura">
+		<div class="menu_ventana" id="menu_ventana_nueva_nota">
+			<button class="ventana_boton" id="centrar_nueva_nota_boton" >Centrar</button>
+			<button class="ventana_boton" id="guardar_nueva_nota_boton" >Guardar</button>
+			<button class="cerrar_menu_ventana" onclick="OcultarTodosLosMenuVentana()">close</button>
+		</div>
+		<div class="menu">
+			<div class="boton_menu regresar_boton" id="regresar_nueva_nota_inicio"></div>
+			<div class="boton_menu opciones_boton" id="opciones_nueva_nota"></div>
+		</div>
+		<textarea class="nuevo_titulo titulo_texto" placeholder="Título..."></textarea>
+		<textarea class="nuevo_contenido contenido_texto" placeholder="Contenido..."></textarea>
+	</div>
+	<!-- -.-.-.-.-.-..-.-.- -->
+	<div class="contenedor editar_nota escritura">
+		<div class="menu_ventana" id="menu_ventana_editar_nota">
+			<button class="ventana_boton" id="centrar_editar_nota_boton" >Centrar</button>
+			<button class="ventana_boton" id="guardar_editar_nota_boton" >Guardar</button>
+			<button class="cerrar_menu_ventana" onclick="OcultarTodosLosMenuVentana()">close</button>
+		</div>
+		<div class="menu">
+			<div class="boton_menu regresar_boton" id="regresar_editar_nota_lectura"></div>
+			<div class="boton_menu opciones_boton" id="opciones_editar_nota"></div>
+		</div>
+		<textarea class="editar_titulo titulo_texto" placeholder="Título..."></textarea>
+		<textarea class="editar_contenido contenido_texto" placeholder="Contenido..."></textarea>
+	</div>
+
+	<!-- -.-.-.-.-.-..-.-.- -->
+
+
+	<div class="consulta">
+		<p>¿Desea guardar la nota?</p><br>
+		<button class="button">SI</button><button>NO</button>
+	</div>
+
+	<div class="continuarNota">
+		<p>Cerraste la app mientras escribias.</p><br>
+		<p class="p">¿Deseas continuar escribiendo?</p><br>
+		<button class="button" id="si_continuar">SI</button><button id="no_continuar">NO</button>
+	</div>
+	<!-- -.-.-.-.-.-..-.-.- -->
+	<script type="text/javascript" src="js/data/localStorage.js"></script>
+	<script type="text/javascript" src="js/data/general.js"></script>
+	<script type="text/javascript" src="js/data/data.js"></script>
+	<script type="text/javascript" src="js/front/menu_ventana.js"></script>
+	<script type="text/javascript" src="js/front/contenedores.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/variables.js"></script>
+</body>
+</html>

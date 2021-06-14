@@ -1,0 +1,420 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	overflow-y: hidden;
+}
+
+.contenedor {
+	position: absolute;
+
+	width: 100vw;
+	height: 100vh;
+
+	background: #ECF0F1;
+
+	transition-duration: .5s;
+}
+
+
+.visualizador{
+	width: 100vw;
+	height: calc(100vh - 50px - 10px);
+	margin-top: 50px;
+	padding-top: 10px;
+}
+.menu{
+	position: absolute;
+
+	width: 100vw;
+	height: 50px;
+
+	background: #85C1E9;
+
+	box-shadow: 0px 2px 2px rgba(0,0,0,.5);
+}
+		.boton_menu{
+			position: absolute;
+
+			width: 40px;
+			height: 40px;
+		}
+
+		.menu_principal{
+			margin-top: -10px;
+			position: fixed;
+		}
+/*---------------------------------------*/
+/*    			  PREVIEW NOTA       				 */
+/*---------------------------------------*/
+/*   inicio, borrador y papele   */
+
+.nota{
+	width: 90vw;
+	height: 50px;
+	display: flex;
+
+	margin:8px 5vw;
+
+	background: #fff;
+	border-radius: 10px;
+
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+
+			.nota:hover{
+				background: #ededed;
+			}
+
+
+			.preview_fecha{
+				width: 40%;
+
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+
+				font-family: lato;
+				text-align: center;
+				font-size: 90%;
+
+			}
+						.fecha{
+							margin-top:5px;
+						}
+						.hora{
+							margin-top: 1.25px;
+						}
+
+			.preview_nota{
+				width: 60%;
+
+				border-top-right-radius: 10px;
+				border-bottom-right-radius: 10px;
+			}
+
+
+							.preview_titulo{
+								width: 90%;
+								height: 5mm;
+								max-height: 5mm;
+								margin: calc(25px - 3mm) 0 0 5%;
+
+								overflow-y: hidden;
+
+								font-size: 4mm;
+								font-weight: bold;
+								font-family: lato;
+								text-align: center;
+							}
+
+
+
+/*---------------------------------------*/
+/*    			  INICIO				 */
+/*---------------------------------------*/
+
+.inicio{
+	height: calc(100vh - 10px);
+	padding-top: 10px;
+	overflow-y: scroll;
+}
+
+
+			.boton_nueva_nota{
+				position: absolute;
+
+				width: 60px;
+				height: 60px;
+				margin:calc(100vh - 60px - 20px) calc(100vw - 60px - 20px);
+
+				background: url("../img/iconos/nueva_nota.svg"),  #85C1E9 ;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+
+				border-radius: 50%;
+
+				box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+			}
+						.boton_nueva_nota:hover{
+							 background:url("../img/iconos/nueva_nota.svg"),#5DADE2;
+							 background-size: 100% 100%;
+						 	 background-repeat: no-repeat;
+						}
+
+
+/*---------------------------------------*/
+/*    			   BORRADOR				 					 */
+/*---------------------------------------*/
+
+.borrador{
+	height: calc(100vh - 10px);
+	padding-top: 10px;
+
+	overflow-y: scroll;
+}
+
+/*---------------------------------------*/
+/*    			   PAPELERA				 					 */
+/*---------------------------------------*/
+
+.papelera{
+	height: calc(100vh - 10px);
+	padding-top: 10px;
+
+	overflow-y: scroll;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------*/
+/*							 LECTURA 								 */
+/*---------------------------------------*/
+
+.lectura{
+}
+			.lectura textarea{
+				outline: none;
+				resize: none;
+
+				border:none;
+
+				box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+			}
+
+
+.regresar_boton{
+	margin:5px 10px;
+
+	background: url("../img/iconos/regresar.svg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.opciones_boton{
+	margin:5px calc(100vw - 50px);
+
+	background: url("../img/iconos/opciones.svg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+
+
+/*---------------------------------------*/
+/*							 ESCRITURA 							 */
+/*---------------------------------------*/
+
+.escritura{
+
+}
+.escritura textarea{
+	outline: none;
+	resize: none;
+
+	border:none;
+
+	box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+.titulo_texto{
+	width: 90vw;
+	height: 5mm;
+	padding: 0 0 1mm 5vw;
+	margin:60px 0 0 2.5vw;
+
+	border-radius: 10px;
+
+	font-size: 5mm;
+	font-family: lato;
+
+	overflow-y: hidden;
+}
+.contenido_texto{
+	width: 90vw;
+	height: calc(98vh - 6mm - 20px - 50px - 4vh );
+	padding: 2vh 0 2vh 5vw;
+	margin:10px 0 0 2.5vw;
+
+	border-radius: 10px;
+
+	font-family: lato;
+
+	overflow-y: scroll;
+}
+
+/*---------------------------------------*/
+/*							 NUEVA NOTA 						 */
+/*---------------------------------------*/
+.nueva_nota{
+}
+
+.menu_ventana{
+	position: fixed;
+
+	display: none;
+	width: 100vw;
+	height: auto;
+	padding-bottom: 10px;
+	padding-top: 20px;
+	margin:-20vh 0;
+
+	background: #ECF0F1;
+
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+	transition: linear .2s;
+}
+		.ventana_boton{
+			width: 100vw;
+			height: 5vh;
+			margin-top: 5px;
+
+			background: #fff;
+
+			font-family: lato;
+			font-weight: 10;
+			font-size: 5mm;
+
+			border:none;
+			outline:none;
+		}
+
+				.ventana_boton:hover{
+					background: #ededed;
+				}
+
+		.cerrar_menu_ventana{
+			width: 90vw;
+			height: 5vh;
+			margin-left: 5vw;
+			margin-top: 20px;
+
+			background: #fff;
+			border-radius: 10px;
+			border:none;
+
+			box-shadow: 0px 0px 2px rgba(0,0,0,.3);
+		}
+
+
+		/*---------------------------------------*/
+		/*							 		OTROS			 					 */
+		/*---------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+.consulta{
+	position: absolute;
+
+	display: none;
+	width: 90vw;
+	height: 200px;
+	margin:calc(45vh - 100px) 5vw;
+
+	background: #85C1E9;
+	border-radius: 10px;
+
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+
+	text-align: center;
+	font-family: lato;
+	font-size: 5mm;
+}
+
+			.consulta > p{
+				margin-top: 15px;
+			}
+
+			.consulta > button{
+				width: calc(90vw - 40px);
+				height: 50px;
+				margin-top: 20px;
+
+				border-radius: 10px;
+				border:none;
+
+				box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+
+				outline: none;
+			}
+
+			.consulta > .button {
+				margin-top: 0px;
+			}
+
+
+/* --------------- */
+.continuarNota{
+	position: absolute;
+
+	display: none;
+	width: 90vw;
+	height: 300px;
+	margin:calc(45vh - 150px) 5vw;
+
+	background: #85C1E9;
+	border-radius: 10px;
+
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+
+	text-align: center;
+	font-family: lato;
+	font-size: 5mm;
+}
+
+			.continuarNota > p{
+				margin-top: 15px;
+			}
+			.continuarNota > .p {
+				margin-top: -5px;
+			}
+
+			.continuarNota > button{
+				width: calc(90vw - 40px);
+				height: 50px;
+				margin-top: 20px;
+
+				border-radius: 10px;
+				border:none;
+
+				box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+
+				outline: none;
+			}
+
+			.continuarNota > .button {
+				margin-top: 0px;
+			}
+
+
+
+
+
+
+.primera_nota{
+	margin-top: 60px;
+}
+.ultima_nota{
+	height: 150px;
+	background: none;
+}
+
+
+
+
+		/*  */
